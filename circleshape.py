@@ -16,3 +16,8 @@ class CircleShape(pygame.sprite.Sprite):
 
     def update(self, dt):
         pass
+    
+    def overlaps(self, other):
+        d2 = self.position.distance_squared_to(other.position)
+        return d2 <= (self.radius + other.radius)**2
+
