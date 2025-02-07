@@ -42,7 +42,7 @@ def main():
                 sys.exit()
             for shot in shots:
                 if asteroid.overlaps(shot):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
         pygame.display.flip()
         dt = clock.tick(60) / 1000
